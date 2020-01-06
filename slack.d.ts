@@ -1,5 +1,377 @@
 // generated from scripts/generate-types
 
+declare namespace Admin.Apps.Approve {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Apps.Restrict {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Apps.Requests.List {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Conversations.SetTeams {
+  export interface Params {
+    token: any
+    channel_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.InviteRequests.Approve {
+  export interface Params {
+    token: any
+    invite_request_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.InviteRequests.Deny {
+  export interface Params {
+    token: any
+    invite_request_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.InviteRequests.List {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.InviteRequests.Approved.List {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.InviteRequests.Denied.List {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Admins.List {
+  export interface Params {
+    token: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Create {
+  export interface Params {
+    token: any
+    team_domain: any
+    team_name: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.List {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Owners.List {
+  export interface Params {
+    token: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Settings.Info {
+  export interface Params {
+    token: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Settings.SetDefaultChannels {
+  export interface Params {
+    token: any
+    channel_ids: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Settings.SetDescription {
+  export interface Params {
+    token: any
+    description: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Settings.SetDiscoverability {
+  export interface Params {
+    token: any
+    discoverability: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Settings.SetIcon {
+  export interface Params {
+    token: any
+    image_url: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Teams.Settings.SetName {
+  export interface Params {
+    token: any
+    name: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.Assign {
+  export interface Params {
+    token: any
+    team_id: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.Invite {
+  export interface Params {
+    token: any
+    channel_ids: any
+    email: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.List {
+  export interface Params {
+    token: any
+    team_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.Remove {
+  export interface Params {
+    token: any
+    team_id: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.SetAdmin {
+  export interface Params {
+    token: any
+    team_id: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.SetExpiration {
+  export interface Params {
+    token: any
+    expiration_ts: any
+    team_id: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.SetOwner {
+  export interface Params {
+    token: any
+    team_id: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.SetRegular {
+  export interface Params {
+    token: any
+    team_id: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Admin.Users.Session.Reset {
+  export interface Params {
+    token: any
+    user_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
 declare namespace Api.Test {
   export interface Params {
     [optional: string]: any
@@ -353,6 +725,20 @@ declare namespace Chat.Delete {
   }
 }
 
+declare namespace Chat.DeleteScheduledMessage {
+  export interface Params {
+    token: any
+    channel: any
+    scheduled_message_id: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
 declare namespace Chat.GetPermalink {
   export interface Params {
     token: any
@@ -384,6 +770,7 @@ declare namespace Chat.MeMessage {
 declare namespace Chat.PostEphemeral {
   export interface Params {
     token: any
+    attachments: any
     channel: any
     text: any
     user: any
@@ -400,6 +787,21 @@ declare namespace Chat.PostMessage {
   export interface Params {
     token: any
     channel: any
+    text: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Chat.ScheduleMessage {
+  export interface Params {
+    token: any
+    channel: any
+    post_at: any
     text: any
     [optional: string]: any
   }
@@ -431,6 +833,18 @@ declare namespace Chat.Update {
     channel: any
     text: any
     ts: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Chat.ScheduledMessages.List {
+  export interface Params {
+    token: any
     [optional: string]: any
   }
   
@@ -731,6 +1145,7 @@ declare namespace Dnd.SetSnooze {
 declare namespace Dnd.TeamInfo {
   export interface Params {
     token: any
+    users: any
     [optional: string]: any
   }
   
@@ -752,38 +1167,9 @@ declare namespace Emoji.List {
   }
 }
 
-declare namespace Files.Comments.Add {
-  export interface Params {
-    token: any
-    comment: any
-    file: any
-    [optional: string]: any
-  }
-  
-  export interface Response {
-    ok: boolean
-    [key: string]: any
-  }
-}
-
 declare namespace Files.Comments.Delete {
   export interface Params {
     token: any
-    file: any
-    id: any
-    [optional: string]: any
-  }
-  
-  export interface Response {
-    ok: boolean
-    [key: string]: any
-  }
-}
-
-declare namespace Files.Comments.Edit {
-  export interface Params {
-    token: any
-    comment: any
     file: any
     id: any
     [optional: string]: any
@@ -860,6 +1246,82 @@ declare namespace Files.SharedPublicURL {
 }
 
 declare namespace Files.Upload {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Files.Remote.Add {
+  export interface Params {
+    token: any
+    external_id: any
+    external_url: any
+    title: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Files.Remote.Info {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Files.Remote.List {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Files.Remote.Remove {
+  export interface Params {
+    token: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Files.Remote.Share {
+  export interface Params {
+    token: any
+    channels: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Files.Remote.Update {
   export interface Params {
     token: any
     [optional: string]: any
@@ -1284,10 +1746,23 @@ declare namespace Oauth.Token {
   }
 }
 
+declare namespace Oauth.V2.Access {
+  export interface Params {
+    code: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
 declare namespace Pins.Add {
   export interface Params {
     token: any
     channel: any
+    timestamp: any
     [optional: string]: any
   }
   
@@ -1326,7 +1801,9 @@ declare namespace Pins.Remove {
 declare namespace Reactions.Add {
   export interface Params {
     token: any
+    channel: any
     name: any
+    timestamp: any
     [optional: string]: any
   }
   
@@ -1837,7 +2314,145 @@ declare namespace Users.Profile.Set {
   }
 }
 
+declare namespace Views.Open {
+  export interface Params {
+    token: any
+    trigger_id: any
+    view: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Views.Publish {
+  export interface Params {
+    token: any
+    user_id: any
+    view: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Views.Push {
+  export interface Params {
+    token: any
+    trigger_id: any
+    view: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
+declare namespace Views.Update {
+  export interface Params {
+    token: any
+    view: any
+    [optional: string]: any
+  }
+  
+  export interface Response {
+    ok: boolean
+    [key: string]: any
+  }
+}
+
 declare module "slack" {
+  export let admin: {
+    apps: {
+      approve(params: Admin.Apps.Approve.Params): Promise<Admin.Apps.Approve.Response>
+      approve(params: Admin.Apps.Approve.Params, callback: (params: Admin.Apps.Approve.Params) => void): void
+      restrict(params: Admin.Apps.Restrict.Params): Promise<Admin.Apps.Restrict.Response>
+      restrict(params: Admin.Apps.Restrict.Params, callback: (params: Admin.Apps.Restrict.Params) => void): void
+      requests: {
+        list(params: Admin.Apps.Requests.List.Params): Promise<Admin.Apps.Requests.List.Response>
+        list(params: Admin.Apps.Requests.List.Params, callback: (params: Admin.Apps.Requests.List.Params) => void): void
+      }
+    }
+    conversations: {
+      setTeams(params: Admin.Conversations.SetTeams.Params): Promise<Admin.Conversations.SetTeams.Response>
+      setTeams(params: Admin.Conversations.SetTeams.Params, callback: (params: Admin.Conversations.SetTeams.Params) => void): void
+    }
+    inviteRequests: {
+      approve(params: Admin.InviteRequests.Approve.Params): Promise<Admin.InviteRequests.Approve.Response>
+      approve(params: Admin.InviteRequests.Approve.Params, callback: (params: Admin.InviteRequests.Approve.Params) => void): void
+      deny(params: Admin.InviteRequests.Deny.Params): Promise<Admin.InviteRequests.Deny.Response>
+      deny(params: Admin.InviteRequests.Deny.Params, callback: (params: Admin.InviteRequests.Deny.Params) => void): void
+      list(params: Admin.InviteRequests.List.Params): Promise<Admin.InviteRequests.List.Response>
+      list(params: Admin.InviteRequests.List.Params, callback: (params: Admin.InviteRequests.List.Params) => void): void
+      approved: {
+        list(params: Admin.InviteRequests.Approved.List.Params): Promise<Admin.InviteRequests.Approved.List.Response>
+        list(params: Admin.InviteRequests.Approved.List.Params, callback: (params: Admin.InviteRequests.Approved.List.Params) => void): void
+      }
+      denied: {
+        list(params: Admin.InviteRequests.Denied.List.Params): Promise<Admin.InviteRequests.Denied.List.Response>
+        list(params: Admin.InviteRequests.Denied.List.Params, callback: (params: Admin.InviteRequests.Denied.List.Params) => void): void
+      }
+    }
+    teams: {
+      admins: {
+        list(params: Admin.Teams.Admins.List.Params): Promise<Admin.Teams.Admins.List.Response>
+        list(params: Admin.Teams.Admins.List.Params, callback: (params: Admin.Teams.Admins.List.Params) => void): void
+      }
+      create(params: Admin.Teams.Create.Params): Promise<Admin.Teams.Create.Response>
+      create(params: Admin.Teams.Create.Params, callback: (params: Admin.Teams.Create.Params) => void): void
+      list(params: Admin.Teams.List.Params): Promise<Admin.Teams.List.Response>
+      list(params: Admin.Teams.List.Params, callback: (params: Admin.Teams.List.Params) => void): void
+      owners: {
+        list(params: Admin.Teams.Owners.List.Params): Promise<Admin.Teams.Owners.List.Response>
+        list(params: Admin.Teams.Owners.List.Params, callback: (params: Admin.Teams.Owners.List.Params) => void): void
+      }
+      settings: {
+        info(params: Admin.Teams.Settings.Info.Params): Promise<Admin.Teams.Settings.Info.Response>
+        info(params: Admin.Teams.Settings.Info.Params, callback: (params: Admin.Teams.Settings.Info.Params) => void): void
+        setDefaultChannels(params: Admin.Teams.Settings.SetDefaultChannels.Params): Promise<Admin.Teams.Settings.SetDefaultChannels.Response>
+        setDefaultChannels(params: Admin.Teams.Settings.SetDefaultChannels.Params, callback: (params: Admin.Teams.Settings.SetDefaultChannels.Params) => void): void
+        setDescription(params: Admin.Teams.Settings.SetDescription.Params): Promise<Admin.Teams.Settings.SetDescription.Response>
+        setDescription(params: Admin.Teams.Settings.SetDescription.Params, callback: (params: Admin.Teams.Settings.SetDescription.Params) => void): void
+        setDiscoverability(params: Admin.Teams.Settings.SetDiscoverability.Params): Promise<Admin.Teams.Settings.SetDiscoverability.Response>
+        setDiscoverability(params: Admin.Teams.Settings.SetDiscoverability.Params, callback: (params: Admin.Teams.Settings.SetDiscoverability.Params) => void): void
+        setIcon(params: Admin.Teams.Settings.SetIcon.Params): Promise<Admin.Teams.Settings.SetIcon.Response>
+        setIcon(params: Admin.Teams.Settings.SetIcon.Params, callback: (params: Admin.Teams.Settings.SetIcon.Params) => void): void
+        setName(params: Admin.Teams.Settings.SetName.Params): Promise<Admin.Teams.Settings.SetName.Response>
+        setName(params: Admin.Teams.Settings.SetName.Params, callback: (params: Admin.Teams.Settings.SetName.Params) => void): void
+      }
+    }
+    users: {
+      assign(params: Admin.Users.Assign.Params): Promise<Admin.Users.Assign.Response>
+      assign(params: Admin.Users.Assign.Params, callback: (params: Admin.Users.Assign.Params) => void): void
+      invite(params: Admin.Users.Invite.Params): Promise<Admin.Users.Invite.Response>
+      invite(params: Admin.Users.Invite.Params, callback: (params: Admin.Users.Invite.Params) => void): void
+      list(params: Admin.Users.List.Params): Promise<Admin.Users.List.Response>
+      list(params: Admin.Users.List.Params, callback: (params: Admin.Users.List.Params) => void): void
+      remove(params: Admin.Users.Remove.Params): Promise<Admin.Users.Remove.Response>
+      remove(params: Admin.Users.Remove.Params, callback: (params: Admin.Users.Remove.Params) => void): void
+      setAdmin(params: Admin.Users.SetAdmin.Params): Promise<Admin.Users.SetAdmin.Response>
+      setAdmin(params: Admin.Users.SetAdmin.Params, callback: (params: Admin.Users.SetAdmin.Params) => void): void
+      setExpiration(params: Admin.Users.SetExpiration.Params): Promise<Admin.Users.SetExpiration.Response>
+      setExpiration(params: Admin.Users.SetExpiration.Params, callback: (params: Admin.Users.SetExpiration.Params) => void): void
+      setOwner(params: Admin.Users.SetOwner.Params): Promise<Admin.Users.SetOwner.Response>
+      setOwner(params: Admin.Users.SetOwner.Params, callback: (params: Admin.Users.SetOwner.Params) => void): void
+      setRegular(params: Admin.Users.SetRegular.Params): Promise<Admin.Users.SetRegular.Response>
+      setRegular(params: Admin.Users.SetRegular.Params, callback: (params: Admin.Users.SetRegular.Params) => void): void
+      session: {
+        reset(params: Admin.Users.Session.Reset.Params): Promise<Admin.Users.Session.Reset.Response>
+        reset(params: Admin.Users.Session.Reset.Params, callback: (params: Admin.Users.Session.Reset.Params) => void): void
+      }
+    }
+  }
+  
   export let api: {
     test(params: Api.Test.Params): Promise<Api.Test.Response>
     test(params: Api.Test.Params, callback: (params: Api.Test.Params) => void): void
@@ -1916,6 +2531,8 @@ declare module "slack" {
   export let chat: {
     delete(params: Chat.Delete.Params): Promise<Chat.Delete.Response>
     delete(params: Chat.Delete.Params, callback: (params: Chat.Delete.Params) => void): void
+    deleteScheduledMessage(params: Chat.DeleteScheduledMessage.Params): Promise<Chat.DeleteScheduledMessage.Response>
+    deleteScheduledMessage(params: Chat.DeleteScheduledMessage.Params, callback: (params: Chat.DeleteScheduledMessage.Params) => void): void
     getPermalink(params: Chat.GetPermalink.Params): Promise<Chat.GetPermalink.Response>
     getPermalink(params: Chat.GetPermalink.Params, callback: (params: Chat.GetPermalink.Params) => void): void
     meMessage(params: Chat.MeMessage.Params): Promise<Chat.MeMessage.Response>
@@ -1924,10 +2541,16 @@ declare module "slack" {
     postEphemeral(params: Chat.PostEphemeral.Params, callback: (params: Chat.PostEphemeral.Params) => void): void
     postMessage(params: Chat.PostMessage.Params): Promise<Chat.PostMessage.Response>
     postMessage(params: Chat.PostMessage.Params, callback: (params: Chat.PostMessage.Params) => void): void
+    scheduleMessage(params: Chat.ScheduleMessage.Params): Promise<Chat.ScheduleMessage.Response>
+    scheduleMessage(params: Chat.ScheduleMessage.Params, callback: (params: Chat.ScheduleMessage.Params) => void): void
     unfurl(params: Chat.Unfurl.Params): Promise<Chat.Unfurl.Response>
     unfurl(params: Chat.Unfurl.Params, callback: (params: Chat.Unfurl.Params) => void): void
     update(params: Chat.Update.Params): Promise<Chat.Update.Response>
     update(params: Chat.Update.Params, callback: (params: Chat.Update.Params) => void): void
+    scheduledMessages: {
+      list(params: Chat.ScheduledMessages.List.Params): Promise<Chat.ScheduledMessages.List.Response>
+      list(params: Chat.ScheduledMessages.List.Params, callback: (params: Chat.ScheduledMessages.List.Params) => void): void
+    }
   }
   
   export let conversations: {
@@ -1992,12 +2615,8 @@ declare module "slack" {
   
   export let files: {
     comments: {
-      add(params: Files.Comments.Add.Params): Promise<Files.Comments.Add.Response>
-      add(params: Files.Comments.Add.Params, callback: (params: Files.Comments.Add.Params) => void): void
       delete(params: Files.Comments.Delete.Params): Promise<Files.Comments.Delete.Response>
       delete(params: Files.Comments.Delete.Params, callback: (params: Files.Comments.Delete.Params) => void): void
-      edit(params: Files.Comments.Edit.Params): Promise<Files.Comments.Edit.Response>
-      edit(params: Files.Comments.Edit.Params, callback: (params: Files.Comments.Edit.Params) => void): void
     }
     delete(params: Files.Delete.Params): Promise<Files.Delete.Response>
     delete(params: Files.Delete.Params, callback: (params: Files.Delete.Params) => void): void
@@ -2011,6 +2630,20 @@ declare module "slack" {
     sharedPublicURL(params: Files.SharedPublicURL.Params, callback: (params: Files.SharedPublicURL.Params) => void): void
     upload(params: Files.Upload.Params): Promise<Files.Upload.Response>
     upload(params: Files.Upload.Params, callback: (params: Files.Upload.Params) => void): void
+    remote: {
+      add(params: Files.Remote.Add.Params): Promise<Files.Remote.Add.Response>
+      add(params: Files.Remote.Add.Params, callback: (params: Files.Remote.Add.Params) => void): void
+      info(params: Files.Remote.Info.Params): Promise<Files.Remote.Info.Response>
+      info(params: Files.Remote.Info.Params, callback: (params: Files.Remote.Info.Params) => void): void
+      list(params: Files.Remote.List.Params): Promise<Files.Remote.List.Response>
+      list(params: Files.Remote.List.Params, callback: (params: Files.Remote.List.Params) => void): void
+      remove(params: Files.Remote.Remove.Params): Promise<Files.Remote.Remove.Response>
+      remove(params: Files.Remote.Remove.Params, callback: (params: Files.Remote.Remove.Params) => void): void
+      share(params: Files.Remote.Share.Params): Promise<Files.Remote.Share.Response>
+      share(params: Files.Remote.Share.Params, callback: (params: Files.Remote.Share.Params) => void): void
+      update(params: Files.Remote.Update.Params): Promise<Files.Remote.Update.Response>
+      update(params: Files.Remote.Update.Params, callback: (params: Files.Remote.Update.Params) => void): void
+    }
   }
   
   export let groups: {
@@ -2088,6 +2721,10 @@ declare module "slack" {
     access(params: Oauth.Access.Params, callback: (params: Oauth.Access.Params) => void): void
     token(params: Oauth.Token.Params): Promise<Oauth.Token.Response>
     token(params: Oauth.Token.Params, callback: (params: Oauth.Token.Params) => void): void
+    v2: {
+      access(params: Oauth.V2.Access.Params): Promise<Oauth.V2.Access.Response>
+      access(params: Oauth.V2.Access.Params, callback: (params: Oauth.V2.Access.Params) => void): void
+    }
   }
   
   export let pins: {
@@ -2209,5 +2846,16 @@ declare module "slack" {
       set(params: Users.Profile.Set.Params): Promise<Users.Profile.Set.Response>
       set(params: Users.Profile.Set.Params, callback: (params: Users.Profile.Set.Params) => void): void
     }
+  }
+  
+  export let views: {
+    open(params: Views.Open.Params): Promise<Views.Open.Response>
+    open(params: Views.Open.Params, callback: (params: Views.Open.Params) => void): void
+    publish(params: Views.Publish.Params): Promise<Views.Publish.Response>
+    publish(params: Views.Publish.Params, callback: (params: Views.Publish.Params) => void): void
+    push(params: Views.Push.Params): Promise<Views.Push.Response>
+    push(params: Views.Push.Params, callback: (params: Views.Push.Params) => void): void
+    update(params: Views.Update.Params): Promise<Views.Update.Response>
+    update(params: Views.Update.Params, callback: (params: Views.Update.Params) => void): void
   }
 }

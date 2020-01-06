@@ -3,8 +3,8 @@
 </h1>
 <p align="center" style="font-size: 1.2rem;">
   <a href=https://www.npmjs.com/package/slack><img alt=npm src=https://badge.fury.io/js/slack.svg></a>
-  <a href=https://github.com/smallwins/slack/actions?query=workflow%3A%22Node+CI%22><img alt="Node CI" src=https://github.com/smallwins/slack/workflows/Node%20CI/badge.svg></a>
-  <img alt="coverage 93.85%" src=https://img.shields.io/badge/coverage-93.85%25-brightgreen.svg>
+  <a href=https://codeship.com/projects/121411><img alt=codeship src=https://img.shields.io/codeship/3fd641e0-81f4-0133-c733-22940a7a47c6.svg></a>
+  <a href=><img alt="coverage 93.85%" src=https://img.shields.io/badge/coverage-93.85%25-brightgreen.svg></a>
 </p>
 
 ### A [Slack Web API](https://api.slack.com/methods) client :seedling::raised_hands::two_hearts:
@@ -86,7 +86,7 @@ import Slack from 'slack'
 const slack = new Slack({useElectronNet:true})
 ```
 
-You can setup an HTTP authentication proxy logic by passing `login` to the constructor.
+You can setup an HTTP authentication proxy logic by passing `login` to the constructor. 
 
 ```javascript
 function login(authInfo, callback) {
@@ -108,16 +108,7 @@ SLACK_CLIENT_ID=xxxx
 SLACK_CLIENT_SECRET=xxxx
 ```
 
-You can get a `SLACK_TOKEN` for testing [here](https://api.slack.com/web). You need to register an app for a `SLACK_CLIENT_ID` and `SLACK_CLIENT_SECRET`. The tests require the app to have the following scopes, and for the target slack to have a `#test` channel:
-
-- `channels:history`
-- `channels:read`
-- `chat:write:bot`
-- `team:read`
-- `users:read`
-
-You can [read about bot tokens here](https://api.slack.com/docs/token-types#bot).
-
+You can get a `SLACK_TOKEN` for testing [here](https://api.slack.com/web). You need to register an app for a `SLACK_CLIENT_ID` and `SLACK_CLIENT_SECRET`. The tests require the app to have the `channels:history` scope. You can [read about bot tokens here](https://api.slack.com/docs/token-types#bot).
 
 ## Testing :green_heart::green_heart::green_heart:
 
@@ -137,6 +128,34 @@ npm run btest
 
 The entire Slack Web API is supported. All method signatures accept a `params` object and either a Node style callback (an errback) or, if absent, it will return a `Promise`. Required params are documented inline below.
 
+- [`slack.admin.apps.approve({token})`](https://api.slack.com/methods/admin.apps.approve)
+- [`slack.admin.apps.requests.list({token})`](https://api.slack.com/methods/admin.apps.requests.list)
+- [`slack.admin.apps.restrict({token})`](https://api.slack.com/methods/admin.apps.restrict)
+- [`slack.admin.conversations.setTeams({token, channel_id})`](https://api.slack.com/methods/admin.conversations.setTeams)
+- [`slack.admin.inviteRequests.approve({token, invite_request_id})`](https://api.slack.com/methods/admin.inviteRequests.approve)
+- [`slack.admin.inviteRequests.approved.list({token})`](https://api.slack.com/methods/admin.inviteRequests.approved.list)
+- [`slack.admin.inviteRequests.denied.list({token})`](https://api.slack.com/methods/admin.inviteRequests.denied.list)
+- [`slack.admin.inviteRequests.deny({token, invite_request_id})`](https://api.slack.com/methods/admin.inviteRequests.deny)
+- [`slack.admin.inviteRequests.list({token})`](https://api.slack.com/methods/admin.inviteRequests.list)
+- [`slack.admin.teams.admins.list({token, team_id})`](https://api.slack.com/methods/admin.teams.admins.list)
+- [`slack.admin.teams.create({token, team_domain, team_name})`](https://api.slack.com/methods/admin.teams.create)
+- [`slack.admin.teams.list({token})`](https://api.slack.com/methods/admin.teams.list)
+- [`slack.admin.teams.owners.list({token, team_id})`](https://api.slack.com/methods/admin.teams.owners.list)
+- [`slack.admin.teams.settings.info({token, team_id})`](https://api.slack.com/methods/admin.teams.settings.info)
+- [`slack.admin.teams.settings.setDefaultChannels({token, channel_ids, team_id})`](https://api.slack.com/methods/admin.teams.settings.setDefaultChannels)
+- [`slack.admin.teams.settings.setDescription({token, description, team_id})`](https://api.slack.com/methods/admin.teams.settings.setDescription)
+- [`slack.admin.teams.settings.setDiscoverability({token, discoverability, team_id})`](https://api.slack.com/methods/admin.teams.settings.setDiscoverability)
+- [`slack.admin.teams.settings.setIcon({token, image_url, team_id})`](https://api.slack.com/methods/admin.teams.settings.setIcon)
+- [`slack.admin.teams.settings.setName({token, name, team_id})`](https://api.slack.com/methods/admin.teams.settings.setName)
+- [`slack.admin.users.assign({token, team_id, user_id})`](https://api.slack.com/methods/admin.users.assign)
+- [`slack.admin.users.invite({token, channel_ids, email, team_id})`](https://api.slack.com/methods/admin.users.invite)
+- [`slack.admin.users.list({token, team_id})`](https://api.slack.com/methods/admin.users.list)
+- [`slack.admin.users.remove({token, team_id, user_id})`](https://api.slack.com/methods/admin.users.remove)
+- [`slack.admin.users.session.reset({token, user_id})`](https://api.slack.com/methods/admin.users.session.reset)
+- [`slack.admin.users.setAdmin({token, team_id, user_id})`](https://api.slack.com/methods/admin.users.setAdmin)
+- [`slack.admin.users.setExpiration({token, expiration_ts, team_id, user_id})`](https://api.slack.com/methods/admin.users.setExpiration)
+- [`slack.admin.users.setOwner({token, team_id, user_id})`](https://api.slack.com/methods/admin.users.setOwner)
+- [`slack.admin.users.setRegular({token, team_id, user_id})`](https://api.slack.com/methods/admin.users.setRegular)
 - [`slack.api.test({})`](https://api.slack.com/methods/api.test)
 - [`slack.apps.permissions.info({token})`](https://api.slack.com/methods/apps.permissions.info)
 - [`slack.apps.permissions.request({token, scopes, trigger_id})`](https://api.slack.com/methods/apps.permissions.request)
@@ -164,10 +183,13 @@ The entire Slack Web API is supported. All method signatures accept a `params` o
 - [`slack.channels.setTopic({token, channel, topic})`](https://api.slack.com/methods/channels.setTopic)
 - [`slack.channels.unarchive({token, channel})`](https://api.slack.com/methods/channels.unarchive)
 - [`slack.chat.delete({token, channel, ts})`](https://api.slack.com/methods/chat.delete)
+- [`slack.chat.deleteScheduledMessage({token, channel, scheduled_message_id})`](https://api.slack.com/methods/chat.deleteScheduledMessage)
 - [`slack.chat.getPermalink({token, channel, message_ts})`](https://api.slack.com/methods/chat.getPermalink)
 - [`slack.chat.meMessage({token, channel, text})`](https://api.slack.com/methods/chat.meMessage)
-- [`slack.chat.postEphemeral({token, channel, text, user})`](https://api.slack.com/methods/chat.postEphemeral)
+- [`slack.chat.postEphemeral({token, attachments, channel, text, user})`](https://api.slack.com/methods/chat.postEphemeral)
 - [`slack.chat.postMessage({token, channel, text})`](https://api.slack.com/methods/chat.postMessage)
+- [`slack.chat.scheduleMessage({token, channel, post_at, text})`](https://api.slack.com/methods/chat.scheduleMessage)
+- [`slack.chat.scheduledMessages.list({token})`](https://api.slack.com/methods/chat.scheduledMessages.list)
 - [`slack.chat.unfurl({token, channel, ts, unfurls})`](https://api.slack.com/methods/chat.unfurl)
 - [`slack.chat.update({token, channel, text, ts})`](https://api.slack.com/methods/chat.update)
 - [`slack.conversations.archive({token, channel})`](https://api.slack.com/methods/conversations.archive)
@@ -192,14 +214,18 @@ The entire Slack Web API is supported. All method signatures accept a `params` o
 - [`slack.dnd.endSnooze({token})`](https://api.slack.com/methods/dnd.endSnooze)
 - [`slack.dnd.info({token})`](https://api.slack.com/methods/dnd.info)
 - [`slack.dnd.setSnooze({token, num_minutes})`](https://api.slack.com/methods/dnd.setSnooze)
-- [`slack.dnd.teamInfo({token})`](https://api.slack.com/methods/dnd.teamInfo)
+- [`slack.dnd.teamInfo({token, users})`](https://api.slack.com/methods/dnd.teamInfo)
 - [`slack.emoji.list({token})`](https://api.slack.com/methods/emoji.list)
-- [`slack.files.comments.add({token, comment, file})`](https://api.slack.com/methods/files.comments.add)
 - [`slack.files.comments.delete({token, file, id})`](https://api.slack.com/methods/files.comments.delete)
-- [`slack.files.comments.edit({token, comment, file, id})`](https://api.slack.com/methods/files.comments.edit)
 - [`slack.files.delete({token, file})`](https://api.slack.com/methods/files.delete)
 - [`slack.files.info({token, file})`](https://api.slack.com/methods/files.info)
 - [`slack.files.list({token})`](https://api.slack.com/methods/files.list)
+- [`slack.files.remote.add({token, external_id, external_url, title})`](https://api.slack.com/methods/files.remote.add)
+- [`slack.files.remote.info({token})`](https://api.slack.com/methods/files.remote.info)
+- [`slack.files.remote.list({token})`](https://api.slack.com/methods/files.remote.list)
+- [`slack.files.remote.remove({token})`](https://api.slack.com/methods/files.remote.remove)
+- [`slack.files.remote.share({token, channels})`](https://api.slack.com/methods/files.remote.share)
+- [`slack.files.remote.update({token})`](https://api.slack.com/methods/files.remote.update)
 - [`slack.files.revokePublicURL({token, file})`](https://api.slack.com/methods/files.revokePublicURL)
 - [`slack.files.sharedPublicURL({token, file})`](https://api.slack.com/methods/files.sharedPublicURL)
 - [`slack.files.upload({token})`](https://api.slack.com/methods/files.upload)
@@ -234,10 +260,11 @@ The entire Slack Web API is supported. All method signatures accept a `params` o
 - [`slack.mpim.replies({token, channel, thread_ts})`](https://api.slack.com/methods/mpim.replies)
 - [`slack.oauth.access({client_id, client_secret, code})`](https://api.slack.com/methods/oauth.access)
 - [`slack.oauth.token({client_id, client_secret, code})`](https://api.slack.com/methods/oauth.token)
-- [`slack.pins.add({token, channel})`](https://api.slack.com/methods/pins.add)
+- [`slack.oauth.v2.access({code})`](https://api.slack.com/methods/oauth.v2.access)
+- [`slack.pins.add({token, channel, timestamp})`](https://api.slack.com/methods/pins.add)
 - [`slack.pins.list({token, channel})`](https://api.slack.com/methods/pins.list)
 - [`slack.pins.remove({token, channel})`](https://api.slack.com/methods/pins.remove)
-- [`slack.reactions.add({token, name})`](https://api.slack.com/methods/reactions.add)
+- [`slack.reactions.add({token, channel, name, timestamp})`](https://api.slack.com/methods/reactions.add)
 - [`slack.reactions.get({token})`](https://api.slack.com/methods/reactions.get)
 - [`slack.reactions.list({token})`](https://api.slack.com/methods/reactions.list)
 - [`slack.reactions.remove({token, name})`](https://api.slack.com/methods/reactions.remove)
@@ -278,6 +305,10 @@ The entire Slack Web API is supported. All method signatures accept a `params` o
 - [`slack.users.setActive({token})`](https://api.slack.com/methods/users.setActive)
 - [`slack.users.setPhoto({token, image})`](https://api.slack.com/methods/users.setPhoto)
 - [`slack.users.setPresence({token, presence})`](https://api.slack.com/methods/users.setPresence)
+- [`slack.views.open({token, trigger_id, view})`](https://api.slack.com/methods/views.open)
+- [`slack.views.publish({token, user_id, view})`](https://api.slack.com/methods/views.publish)
+- [`slack.views.push({token, trigger_id, view})`](https://api.slack.com/methods/views.push)
+- [`slack.views.update({token, view})`](https://api.slack.com/methods/views.update)
 
 # Contributing
 

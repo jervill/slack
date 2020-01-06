@@ -1,4 +1,124 @@
 {
+  "admin.apps.approve": [
+    "token"
+  ],
+  "admin.apps.restrict": [
+    "token"
+  ],
+  "admin.apps.requests.list": [
+    "token"
+  ],
+  "admin.conversations.setTeams": [
+    "token",
+    "channel_id"
+  ],
+  "admin.inviteRequests.approve": [
+    "token",
+    "invite_request_id"
+  ],
+  "admin.inviteRequests.deny": [
+    "token",
+    "invite_request_id"
+  ],
+  "admin.inviteRequests.list": [
+    "token"
+  ],
+  "admin.inviteRequests.approved.list": [
+    "token"
+  ],
+  "admin.inviteRequests.denied.list": [
+    "token"
+  ],
+  "admin.teams.admins.list": [
+    "token",
+    "team_id"
+  ],
+  "admin.teams.create": [
+    "token",
+    "team_domain",
+    "team_name"
+  ],
+  "admin.teams.list": [
+    "token"
+  ],
+  "admin.teams.owners.list": [
+    "token",
+    "team_id"
+  ],
+  "admin.teams.settings.info": [
+    "token",
+    "team_id"
+  ],
+  "admin.teams.settings.setDefaultChannels": [
+    "token",
+    "channel_ids",
+    "team_id"
+  ],
+  "admin.teams.settings.setDescription": [
+    "token",
+    "description",
+    "team_id"
+  ],
+  "admin.teams.settings.setDiscoverability": [
+    "token",
+    "discoverability",
+    "team_id"
+  ],
+  "admin.teams.settings.setIcon": [
+    "token",
+    "image_url",
+    "team_id"
+  ],
+  "admin.teams.settings.setName": [
+    "token",
+    "name",
+    "team_id"
+  ],
+  "admin.users.assign": [
+    "token",
+    "team_id",
+    "user_id"
+  ],
+  "admin.users.invite": [
+    "token",
+    "channel_ids",
+    "email",
+    "team_id"
+  ],
+  "admin.users.list": [
+    "token",
+    "team_id"
+  ],
+  "admin.users.remove": [
+    "token",
+    "team_id",
+    "user_id"
+  ],
+  "admin.users.setAdmin": [
+    "token",
+    "team_id",
+    "user_id"
+  ],
+  "admin.users.setExpiration": [
+    "token",
+    "expiration_ts",
+    "team_id",
+    "user_id"
+  ],
+  "admin.users.setOwner": [
+    "token",
+    "team_id",
+    "user_id"
+  ],
+  "admin.users.setRegular": [
+    "token",
+    "team_id",
+    "user_id"
+  ],
+  "admin.users.session.reset": [
+    "token",
+    "user_id"
+  ],
   "api.test": [],
   "apps.permissions.info": [
     "token"
@@ -108,6 +228,11 @@
     "channel",
     "ts"
   ],
+  "chat.deleteScheduledMessage": [
+    "token",
+    "channel",
+    "scheduled_message_id"
+  ],
   "chat.getPermalink": [
     "token",
     "channel",
@@ -120,6 +245,7 @@
   ],
   "chat.postEphemeral": [
     "token",
+    "attachments",
     "channel",
     "text",
     "user"
@@ -127,6 +253,12 @@
   "chat.postMessage": [
     "token",
     "channel",
+    "text"
+  ],
+  "chat.scheduleMessage": [
+    "token",
+    "channel",
+    "post_at",
     "text"
   ],
   "chat.unfurl": [
@@ -140,6 +272,9 @@
     "channel",
     "text",
     "ts"
+  ],
+  "chat.scheduledMessages.list": [
+    "token"
   ],
   "conversations.archive": [
     "token",
@@ -232,24 +367,14 @@
     "num_minutes"
   ],
   "dnd.teamInfo": [
-    "token"
+    "token",
+    "users"
   ],
   "emoji.list": [
     "token"
   ],
-  "files.comments.add": [
-    "token",
-    "comment",
-    "file"
-  ],
   "files.comments.delete": [
     "token",
-    "file",
-    "id"
-  ],
-  "files.comments.edit": [
-    "token",
-    "comment",
     "file",
     "id"
   ],
@@ -273,6 +398,28 @@
     "file"
   ],
   "files.upload": [
+    "token"
+  ],
+  "files.remote.add": [
+    "token",
+    "external_id",
+    "external_url",
+    "title"
+  ],
+  "files.remote.info": [
+    "token"
+  ],
+  "files.remote.list": [
+    "token"
+  ],
+  "files.remote.remove": [
+    "token"
+  ],
+  "files.remote.share": [
+    "token",
+    "channels"
+  ],
+  "files.remote.update": [
     "token"
   ],
   "groups.archive": [
@@ -409,9 +556,13 @@
     "client_secret",
     "code"
   ],
+  "oauth.v2.access": [
+    "code"
+  ],
   "pins.add": [
     "token",
-    "channel"
+    "channel",
+    "timestamp"
   ],
   "pins.list": [
     "token",
@@ -423,7 +574,9 @@
   ],
   "reactions.add": [
     "token",
-    "name"
+    "channel",
+    "name",
+    "timestamp"
   ],
   "reactions.get": [
     "token"
@@ -565,5 +718,24 @@
   ],
   "users.profile.set": [
     "token"
+  ],
+  "views.open": [
+    "token",
+    "trigger_id",
+    "view"
+  ],
+  "views.publish": [
+    "token",
+    "user_id",
+    "view"
+  ],
+  "views.push": [
+    "token",
+    "trigger_id",
+    "view"
+  ],
+  "views.update": [
+    "token",
+    "view"
   ]
 }
